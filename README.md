@@ -55,7 +55,7 @@ The supported extensions are:
 Run the following command to ingest all the data.
 
 ```shell
-python ingest.py
+python app/ingest.py
 ```
 
 Output should look like this:
@@ -81,7 +81,7 @@ Note: during the ingest process no data leaves your local environment. You could
 In order to ask a question, run a command like:
 
 ```shell
-python app/llamaGPT.py
+python main.py
 ```
 
 And wait for the script to require your input.
@@ -98,7 +98,7 @@ Type `exit` to finish the script.
 
 
 ### CLI
-The script also supports optional command-line arguments to modify its behavior. You can see a full list of these arguments by running the command ```python app/llamaGPT.py --help``` in your terminal.
+The script also supports optional command-line arguments to modify its behavior. You can see a full list of these arguments by running the command ```python main --help``` in your terminal.
 
 
 # How does it work?
