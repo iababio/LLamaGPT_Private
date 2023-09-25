@@ -43,7 +43,7 @@ def main():
             print(f"Model {model_type} not supported!")
             exit;
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever,
-                                     return_source_documents=not args.hide_source)
+                                     return_source=not args.hide_source)
     # Interactive questions and answers
     while True:
         query = input("\nEnter a query: ")
@@ -55,7 +55,7 @@ def main():
         # Get the answer from the chain
         start = time.time()
         res = qa(query)
-        answer, docs = res['result'], [] if args.hide_source else res['source_documents']
+        answer, docs = res['result'], [] if args.hide_source else res['source']
         end = time.time()
 
         # Print the result

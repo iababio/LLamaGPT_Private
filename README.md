@@ -29,11 +29,11 @@ TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
 
 ## Test dataset
-This repo uses a [state of the union transcript](https://github.com/ababio/llamaGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
+This repo uses a [state of the union transcript](https://github.com/ababio/llamaGPT/blob/main/app/source/state_of_the_union.txt) as an example.
 
 ## Instructions for ingesting your own dataset
 
-Put any and all your files into the `source_documents` directory
+Put any and all your files into the `app/source` directory
 
 The supported extensions are:
 
@@ -62,9 +62,9 @@ Output should look like this:
 
 ```shell
 Creating new vectorstore
-Loading documents from source_documents
+Loading documents from app/source
 Loading new documents: 100%|██████████████████████| 1/1 [00:01<00:00,  1.73s/it]
-Loaded 1 new documents from source_documents
+Loaded 1 new documents from app/source
 Split into 90 chunks of text (max. 500 tokens each)
 Creating embeddings. May take some minutes...
 Using embedded DuckDB with persistence: data will be stored in: db
