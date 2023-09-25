@@ -1,6 +1,6 @@
 ---
 files: ^(.*\.(py|json|md|sh|yaml|cfg|txt))$
-exclude: ^(\.[^/]*cache/.*|.*/_user.py|source_documents/)$
+exclude: ^(\.[^/]*cache/.*|.*/_user.py|app/source/)$
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
